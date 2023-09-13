@@ -155,7 +155,7 @@ document
       localStorage.setItem("address", null);
       // let cartlength=JSON.parse(localStorage.getItem("cart"));
       // document.getElementById("cart_no").innerText=cartlength.length;
-      window.location.replace("./thankyou.html");
+      window.location.replace("./index.html");
     } else {
       alert("Wrong OTP, Try Again");
     }
