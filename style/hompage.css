@@ -97,9 +97,8 @@
 
 .account-actions a:nth-child(1):hover {
     background-color: #b9cee4;
-    /* Blue background on hover */
     color: #0073e6;
-    /* White text on hover */
+
 }
 
 /* Sign Up button */
@@ -129,13 +128,13 @@
 } */
 .free-trial-button img {
     width: 20px;
-    /* Adjust the width to your desired size */
+
     height: 20px;
-    /* Adjust the height to your desired size */
+
     margin-right: 5px;
-    /* Add margin to separate the image from text */
+
     border-radius: 20%;
-    /* Add border radius for the image */
+
 }
 
 .free-trial-button {
