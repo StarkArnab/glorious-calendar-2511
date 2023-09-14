@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./CSS/signup.css" />
+    
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body>
+  
+
+  <!-- MAIN SIGNUP PAGE ...................................................................... -->
+  <h1>REGISTER</h1>
+    <form action="" id="registration_form">
+        <div id="main">
+            <div>
+              <div>
+                <label for="name">Name *</label>
+                </div>
+                <input type="text" placeholder="Name" id="name" required>
+            </div>
+            <div>
+              <div>
+                <label for="email">Email *</label>
+                </div>
+                <input type="text" placeholder="Email" id="email" required>
+            </div>
+            <div>
+              <div>
+                <label for="password">Password *</label>
+                </div>
+                <input type="password" placeholder="Password" id="password" autocomplete="on" required>
+            </div>
+            <div>
+              <div>
+                <label for="phone">Phone Number</label>
+                </div>
+                <input type="text" placeholder="Phone Number" id="phone">
+            </div>
+            <div>
+              <div>
+                <label for="addressLine">Address Line</label>
+                </div>
+                <input type="text" placeholder="Address Line" id="addressLine">
+            </div>
+            <div>
+              <div>
+                <label for="city">Suburb/City *</label>
+                </div>
+                <input type="text" placeholder="Suburb/City" id="city" required>
+            </div>
+            <div>
+              <div>
+                <label for="state">State/Province *</label>
+                </div>
+                <input type="text" placeholder="states" id="state" required>
+            </div>
+            <div>
+              <div>
+                <label for="zip">Zip/Postcode *</label>
+                </div>
+                <input type="text" placeholder="Zip/Postcode" id="zip" required>
+            </div>
+            <div>
+              <div>
+                <label for="country">Country *</label>
+                </div>
+                <select id="country" required>
+                    <option value="" disabled selected>Choose a Country</option>
+                </select>
+            </div>
+            <div>
+              <div>
+                <label for="company">Company Name</label>
+                </div>
+                <input type="text" placeholder="Company Name" id="company">
+            </div>
+            <!-- <form action="?" method="POST"> -->
+            <!-- <div class="g-recaptcha" data-sitekey="6LfjOgMnAAAAAJyOOemQ7lZpeUCsmBiyZKbJ4TqC"></div> -->
+            <button type="button" id="register">CREATE ACCOUNT</button>
+            <!-- </form> -->
+        </div>
+    </form>
+
+    
+    <script  src="./Script/signup.js" type="module">
+      </script>
+  </body>
+  </html>
