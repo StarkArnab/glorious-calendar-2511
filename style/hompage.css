@@ -1,0 +1,247 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(255, 254, 254);
+    color: #333;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.middle-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-icon img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 5px;
+    width: 80%;
+    background-color: transparent;
+}
+
+.search-bar input {
+    border: none;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+
+}
+
+.notification-bell img {
+    height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.account-actions a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+.adobe-logo img {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.account-actions a:nth-child(1) {
+    text-decoration: none;
+    color: #0073e6;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.account-actions a:nth-child(1):hover {
+    background-color: #b9cee4;
+    /* Blue background on hover */
+    color: #0073e6;
+    /* White text on hover */
+}
+
+/* Sign Up button */
+.signup-button {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #0073e6;
+    padding: 5px 10px;
+    border: 1px solid #0073e6;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #005aa6;
+    border: 1px solid #005aa6;
+}
+
+.free-trial {
+    position: relative;
+    display: inline-block;
+}
+
+/* .free-trial-icon img {
+    height: 20px;
+    margin-right: 5px;
+} */
+.free-trial-button img {
+    width: 20px;
+    /* Adjust the width to your desired size */
+    height: 20px;
+    /* Adjust the height to your desired size */
+    margin-right: 5px;
+    /* Add margin to separate the image from text */
+    border-radius: 20%;
+    /* Add border radius for the image */
+}
+
+.free-trial-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #a8aaac;
+    padding: 5px 10px;
+    border: 1px solid #a8aaac;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /* Add border radius */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Display additional options on hover */
+.free-trial:hover .free-trial-options {
+    display: block;
+}
+
+.free-trial-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #0073e6;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.free-trial-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.free-trial-options li {
+    padding: 10px;
+}
+
+.free-trial-options a {
+    text-decoration: none;
+    color: #333;
+}
+
+.free-trial-options a:hover {
+    color: #0073e6;
+}
+
+.centered-project-details {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.centered-project-details>* {
+    margin-right: 20px !important;
+}
+
+.owner-name,
+.separator {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.follow-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.separator {
+    margin: 0 5px;
+}
+
+.avatar img {
+    border-radius: 20px;
+}
+
+
+/* site content */
+
+#site-content * {
+    box-sizing: border-box;
+}
+
+.ImageElement-root-kir {
+    position: relative;
+}
+
+.lightbox-link {
+    cursor: zoom-in;
+}
+
+.project-module-image {
+    text-align: center;
+}
+
+.ImageElement-root-kir {
+    position: relative;
+    margin: 0 auto;
+    /* Center horizontally */
+    text-align: center;
+    /* Center content within this block */
+}
