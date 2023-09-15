@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px;
+    /* Add padding to the search bar */
+    flex-grow: 1;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    /* Remove border */
+    padding: 5px;
+    /* Adjust padding to increase the input's height */
+    height: 20px;
+    /* Adjust the height of the input field */
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.icon-button {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust the size of the icons as needed */
+.icon-button img {
+    width: 24px;
+    /* Adjust the width */
+    height: 24px;
+    /* Adjust the height */
+}
+
+.category-bar {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.category-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* category-bar styles */
+
+
+.category-bar {
+    background-color: white;
+    color: gray;
+    text-align: center;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.category-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-bar li {
+    padding: 10px 20px;
+}
+
+.category-bar a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+.long-image-section {
+    background-color: #f0f0f0;
+    /* Background color for the long image section */
+    padding: 20px;
+    /* Adjust padding as needed for spacing */
+    text-align: center;
+    /* Center-align the images */
+}
+
+.long-image-section img {
+    max-width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+/* browse-section */
+
+.browse-section {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+    /* Add position relative */
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.category-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+}
+
+.prev-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    /* Position the buttons */
+    top: 50%;
+    /* Vertically center the buttons */
+    transform: translateY(-50%);
+    /* Adjust for vertical centering */
+    z-index: 1;
+    /* Place the buttons above the category container */
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.category-container {
+    display: flex;
+    /* No animation needed here */
+    width: fit-content;
+    /* Ensure container shrinks to fit its content */
+    margin-left: auto;
+    margin-right: auto;
+    animation: moveCategories 20s linear infinite;
+    /* Continuous scrolling effect */
+}
+
+.category-item {
+    text-align: center;
+    margin: 0 10px;
+    min-width: 200px;
+    /* Adjust the minimum width as needed */
+    flex: 0 0 200px;
+    /* Fix the width to 200px */
+}
+
+.category-item img {
+    width: 200px;
+    /* Set a fixed width for uniform image sizes */
+    height: 120px;
+    /* Maintain aspect ratio */
+}
+
+.category-item p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Keyframes animation for continuous scrolling of the entire container */
+@keyframes moveCategories {
+    0% {
+        transform: translateX(0);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move completely off-screen to the left */
+    }
+}
