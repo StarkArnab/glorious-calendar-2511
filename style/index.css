@@ -122,11 +122,8 @@ nav {
 
 .long-image-section {
     background-color: #f0f0f0;
-    /* Background color for the long image section */
     padding: 20px;
-    /* Adjust padding as needed for spacing */
     text-align: center;
-    /* Center-align the images */
 }
 
 .long-image-section img {
@@ -142,9 +139,7 @@ nav {
     text-align: center;
     padding: 20px;
     overflow: hidden;
-    /* Hide overflowing content */
     position: relative;
-    /* Add position relative */
 }
 
 .section-title {
@@ -158,7 +153,6 @@ nav {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Hide overflowing content */
     position: relative;
 }
 
@@ -170,13 +164,9 @@ nav {
     cursor: pointer;
     color: #333;
     position: absolute;
-    /* Position the buttons */
     top: 50%;
-    /* Vertically center the buttons */
     transform: translateY(-50%);
-    /* Adjust for vertical centering */
     z-index: 1;
-    /* Place the buttons above the category container */
 }
 
 .prev-button {
@@ -189,37 +179,27 @@ nav {
 
 .category-container {
     display: flex;
-    /* No animation needed here */
     width: fit-content;
-    /* Ensure container shrinks to fit its content */
     margin-left: auto;
     margin-right: auto;
     animation: moveCategories 20s linear infinite;
-    /* Continuous scrolling effect */
 }
 
 .category-item {
     text-align: center;
     margin: 0 10px;
     min-width: 200px;
-    /* Adjust the minimum width as needed */
     flex: 0 0 200px;
-    /* Fix the width to 200px */
     background-color: #f5f5f5;
-    /* Gray background color */
     padding: 20px;
-    /* Add some padding for spacing */
     border-radius: 10px;
-    /* Add rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow */
 }
 
 .category-item img {
     width: 200px;
     /* Set a fixed width for uniform image sizes */
     height: 120px;
-    /* Maintain aspect ratio */
 }
 
 .category-item p {
@@ -237,7 +217,6 @@ nav {
 
     100% {
         transform: translateX(-100%);
-        /* Move completely off-screen to the left */
     }
 }
 
@@ -249,7 +228,6 @@ nav {
     background-color: #f2f2f2;
     /* Gray background color */
     padding: 20px;
-    /* Add padding for gaps between images */
 }
 
 /* Style the section title */
@@ -262,13 +240,11 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    /* Adjust the gap between images as needed */
 }
 
 /* Style the feature items (images) */
 .feature-item {
     width: 100%;
-    /* Set a fixed width for each image container */
 }
 
 .feature-item img {
@@ -276,7 +252,6 @@ nav {
     height: 300px;
     border-radius: 10px;
     margin: 10px;
-    /* Rounded corners for the images */
 }
 
 /* deal of the day section */
@@ -296,22 +271,16 @@ nav {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    /* Use flexbox to center-align items vertically and horizontally */
     flex-direction: column;
-    /* Stack the items vertically */
     justify-content: center;
-    /* Center vertically */
     align-items: center;
-    /* Center horizontally */
 }
 
 /* Style the product image */
 .product-image {
     width: 100%;
     height: 200px;
-    /* Set a fixed height for uniformity */
     object-fit: cover;
-    /* Maintain aspect ratio and cover the container */
 }
 
 
@@ -338,7 +307,6 @@ nav {
 /* Style the "Add to Cart" button */
 .add-to-cart-button {
     background-color: rgb(216, 213, 213);
-    /* Yellow color */
     color: #fff;
     padding: 8px 16px;
     border: none;
@@ -346,36 +314,26 @@ nav {
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
-    /* Center the icon and text horizontally */
     justify-content: center;
-    /* Center the icon and text vertically */
     margin-top: 10px;
-    /* Add spacing between the button and other elements */
 }
 
 .cart-icon {
     padding-left: 8px;
     max-height: 20px;
-    /* Adjust the maximum height as needed */
     max-width: 20px;
-    /* Adjust the maximum width as needed */
     margin-right: 8px;
-    /* Add space between the icon and text */
 }
 
 .add-to-cart-button:hover {
     background-color: #ffae00;
-    /* Darker yellow on hover */
 }
 
 /* Style the button icon */
 .add-to-cart-button::before {
     /* content: "\2605"; */
-    /* Unicode star character */
     margin-right: 4px;
-    /* Add space between the icon and text */
     font-size: 1.2rem;
-    /* Adjust the icon size */
 }
 
 /* Center the product grid container vertically */
@@ -407,20 +365,15 @@ nav {
 /* Style each section */
 .section {
     flex: 1;
-    /* Each section takes equal space */
     text-align: center;
     padding: 20px;
     background-color: #fff;
-    /* Default background color */
     color: #000;
-    /* Default text color */
     font-size: 1.2rem;
 }
 
-/* Style the yellow background for the first section */
 .yellow-background {
     background: linear-gradient(to bottom, #ffc107 50%, #fff 50%);
-    /* Yellow to white gradient */
 }
 
 
@@ -471,27 +424,21 @@ nav {
 
 .offers-section {
     text-align: center;
-    /* Center-align the images horizontally */
     padding: 20px;
-    /* background-color: #f0f0f0; */
-    /* Background color for the Offers section */
+
 }
 
 .image-container {
     display: flex;
     justify-content: center;
-    /* Center-align the images horizontally */
     align-items: center;
-    /* Center-align the images vertically */
 }
 
 .image-container img {
     width: 800px;
-    /* Set the width to your desired size */
     height: auto;
-    /* Automatically adjust the height to maintain the aspect ratio */
     margin: 0 10px;
-    /* Add some spacing between the images */
+
 }
 
 
@@ -502,9 +449,8 @@ nav {
     justify-content: center;
     align-items: center;
     width: 80%;
-    /* Set the width to 80% */
+
     margin: 0 auto;
-    /* Center the container horizontally */
 }
 
 /* Left section with a yellow background */
@@ -522,13 +468,13 @@ nav {
     font-family: 'Thames Serial';
     src: url('path/to/thames-serial-font.woff2') format('woff2'),
         url('path/to/thames-serial-font.woff') format('woff');
-    /* Add more font formats if necessary */
+
 }
 
 /* Apply the font to the left section's paragraphs */
 .left-section p {
     font-family: 'Thames Serial', sans-serif;
-    /* Use fallback font if Thames Serial is not available */
+
 }
 
 .left-section>p:nth-child(1) {
@@ -544,7 +490,6 @@ nav {
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    /* Adjust the width of the right section */
 }
 
 /* Individual labels with hover effect */
