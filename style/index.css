@@ -1,0 +1,674 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px;
+    height: 20px;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.icon-button {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.category-bar {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.category-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* category-bar styles */
+
+
+.category-bar {
+    background-color: white;
+    color: gray;
+    text-align: center;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.category-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-bar li {
+    padding: 10px 20px;
+}
+
+.category-bar a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+.long-image-section {
+    background-color: #f0f0f0;
+    /* Background color for the long image section */
+    padding: 20px;
+    /* Adjust padding as needed for spacing */
+    text-align: center;
+    /* Center-align the images */
+}
+
+.long-image-section img {
+    max-width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+/* browse-section */
+
+.browse-section {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+    /* Add position relative */
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.category-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+}
+
+.prev-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    /* Position the buttons */
+    top: 50%;
+    /* Vertically center the buttons */
+    transform: translateY(-50%);
+    /* Adjust for vertical centering */
+    z-index: 1;
+    /* Place the buttons above the category container */
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.category-container {
+    display: flex;
+    /* No animation needed here */
+    width: fit-content;
+    /* Ensure container shrinks to fit its content */
+    margin-left: auto;
+    margin-right: auto;
+    animation: moveCategories 20s linear infinite;
+    /* Continuous scrolling effect */
+}
+
+.category-item {
+    text-align: center;
+    margin: 0 10px;
+    min-width: 200px;
+    /* Adjust the minimum width as needed */
+    flex: 0 0 200px;
+    /* Fix the width to 200px */
+    background-color: #f5f5f5;
+    /* Gray background color */
+    padding: 20px;
+    /* Add some padding for spacing */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+}
+
+.category-item img {
+    width: 200px;
+    /* Set a fixed width for uniform image sizes */
+    height: 120px;
+    /* Maintain aspect ratio */
+}
+
+.category-item p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Keyframes animation for continuous scrolling of the entire container */
+@keyframes moveCategories {
+    0% {
+        transform: translateX(0);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move completely off-screen to the left */
+    }
+}
+
+/* feature section */
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    /* Gray background color */
+    padding: 20px;
+    /* Add padding for gaps between images */
+}
+
+/* Style the section title */
+.section-title {
+    text-align: center;
+}
+
+/* Style the feature container */
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Adjust the gap between images as needed */
+}
+
+/* Style the feature items (images) */
+.feature-item {
+    width: 100%;
+    /* Set a fixed width for each image container */
+}
+
+.feature-item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    /* Rounded corners for the images */
+}
+
+/* deal of the day section */
+
+.deal-of-the-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the product card */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* Use flexbox to center-align items vertically and horizontally */
+    flex-direction: column;
+    /* Stack the items vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+}
+
+/* Style the product image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    /* Set a fixed height for uniformity */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+}
+
+
+/* Style the product name */
+.product-name {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Style the product rating and reviews */
+.product-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+/* Style the price */
+.product-price {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Style the "Add to Cart" button */
+.add-to-cart-button {
+    background-color: rgb(216, 213, 213);
+    /* Yellow color */
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    /* Center the icon and text horizontally */
+    justify-content: center;
+    /* Center the icon and text vertically */
+    margin-top: 10px;
+    /* Add spacing between the button and other elements */
+}
+
+.cart-icon {
+    padding-left: 8px;
+    max-height: 20px;
+    /* Adjust the maximum height as needed */
+    max-width: 20px;
+    /* Adjust the maximum width as needed */
+    margin-right: 8px;
+    /* Add space between the icon and text */
+}
+
+.add-to-cart-button:hover {
+    background-color: #ffae00;
+    /* Darker yellow on hover */
+}
+
+/* Style the button icon */
+.add-to-cart-button::before {
+    /* content: "\2605"; */
+    /* Unicode star character */
+    margin-right: 4px;
+    /* Add space between the icon and text */
+    font-size: 1.2rem;
+    /* Adjust the icon size */
+}
+
+/* Center the product grid container vertically */
+.product-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+/* blogs section */
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Style each section */
+.section {
+    flex: 1;
+    /* Each section takes equal space */
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    /* Default background color */
+    color: #000;
+    /* Default text color */
+    font-size: 1.2rem;
+}
+
+/* Style the yellow background for the first section */
+.yellow-background {
+    background: linear-gradient(to bottom, #ffc107 50%, #fff 50%);
+    /* Yellow to white gradient */
+}
+
+
+.blogs-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    flex: 1;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    /* text-align: center; */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+}
+
+.card h5 {
+    text-align: start;
+    /* font-size: 1.5rem; */
+    color: #777;
+    margin: 10px 0;
+}
+
+.card p {
+    text-align: start;
+    margin: 10px 0;
+}
+
+.learn-more {
+    font-size: 1rem;
+    display: block;
+    text-align: start;
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* offer section */
+
+.offers-section {
+    text-align: center;
+    /* Center-align the images horizontally */
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    /* Background color for the Offers section */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    /* Center-align the images horizontally */
+    align-items: center;
+    /* Center-align the images vertically */
+}
+
+.image-container img {
+    width: 800px;
+    /* Set the width to your desired size */
+    height: auto;
+    /* Automatically adjust the height to maintain the aspect ratio */
+    margin: 0 10px;
+    /* Add some spacing between the images */
+}
+
+
+/* feature section */
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* Set the width to 80% */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+/* Left section with a yellow background */
+.left-section {
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+@font-face {
+    font-family: 'Thames Serial';
+    src: url('path/to/thames-serial-font.woff2') format('woff2'),
+        url('path/to/thames-serial-font.woff') format('woff');
+    /* Add more font formats if necessary */
+}
+
+/* Apply the font to the left section's paragraphs */
+.left-section p {
+    font-family: 'Thames Serial', sans-serif;
+    /* Use fallback font if Thames Serial is not available */
+}
+
+.left-section>p:nth-child(1) {
+    background-color: yellow;
+}
+
+/* Right section containing 15 labels */
+.right-section {
+    width: 40%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    /* Adjust the width of the right section */
+}
+
+/* Individual labels with hover effect */
+.label {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.label:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* footer section */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9b31e;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
