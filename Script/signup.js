@@ -78,6 +78,7 @@ document.getElementById("register").addEventListener("click", function () {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            alert(error);
             console.log(errorMessage);
             // ..
         });
