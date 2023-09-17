@@ -1,38 +1,27 @@
-const categoryContainer = document.querySelector(".category-container");
-const prevButton = document.querySelector(".prev-button");
-const nextButton = document.querySelector(".next-button");
-const itemWidth = categoryContainer.querySelector(".category-item").offsetWidth;
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    const featureContainer = document.querySelector(".feature-container");
+    const featureItems = document.querySelectorAll(".feature-item");
+    const scrollAmount = featureItems[0].offsetWidth * 2 + 20; // Scroll two items at a time
 
-nextButton.addEventListener("click", () => {
-    currentIndex++;
-    if (currentIndex >= categoryContainer.children.length) {
-        currentIndex = 0;
+    let currentIndex = 0;
+
+    prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex -= 2; // Scroll two items back
+            scrollToIndex();
+        }
+    });
+
+    nextButton.addEventListener("click", function () {
+        if (currentIndex < featureItems.length - 2) {
+            currentIndex += 2; // Scroll two items forward
+            scrollToIndex();
+        }
+    });
+
+    function scrollToIndex() {
+        featureContainer.style.transform = `translateX(-${currentIndex * scrollAmount}px)`;
     }
-    updateSlider();
 });
-
-prevButton.addEventListener("click", () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = categoryContainer.children.length - 1;
-    }
-    updateSlider();
-});
-
-function updateSlider() {
-    const offset = -currentIndex * itemWidth;
-    categoryContainer.style.transform = `translateX(${offset}px)`;
-}
-
-// Auto-infinite scrolling
-function autoSlide() {
-    currentIndex++;
-    if (currentIndex >= categoryContainer.children.length) {
-        currentIndex = 0;
-    }
-    updateSlider();
-    setTimeout(autoSlide, 2000); // Change slide every 2 seconds
-}
-
-autoSlide(); // Start auto sliding
