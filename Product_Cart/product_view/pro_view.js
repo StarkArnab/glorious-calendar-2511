@@ -8,7 +8,9 @@ let description_body = document.getElementsByClassName("description-body");
 let addCart = document.getElementById("addCart");
 
 async function fetchData() {
-  let res = await fetch(`http://localhost:3000/exterior/${index}`);
+  let res = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/exterior/${index}`
+  );
   let data = await res.json();
   updateData(data);
 }
@@ -65,7 +67,9 @@ const goPrv = () => {
 addCart.addEventListener("click", async function () {
   let val = JSON.parse(localStorage.getItem("index"));
 
-  let res = await fetch(`http://localhost:3000/cart`);
+  let res = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/cart`
+  );
   let data = await res.json();
 
   let flag = true;
@@ -75,18 +79,23 @@ addCart.addEventListener("click", async function () {
     }
   });
 
-  let element_temp = await fetch(`http://localhost:3000/exterior/${val}`);
+  let element_temp = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/exterior/${val}`
+  );
 
   let element = await element_temp.json();
 
   if (flag) {
     element.qty = 1;
-    let res_add = await fetch(`http://localhost:3000/cart`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(element),
-    });
+    let res_add = await fetch(
+      `https://mock-server-team-masai-blvy.onrender.com/cart`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(element),
+      }
+    );
   }
 });

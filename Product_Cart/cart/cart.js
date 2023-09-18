@@ -7,8 +7,11 @@ let discount_val = document.getElementById("discount-val");
 let payable = document.getElementById("payable");
 
 async function fetchItem() {
-  let res = await fetch(`http://localhost:3000/cart`);
+  let res = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/cart`
+  );
   let data = await res.json();
+  console.log(data);
 
   displayData(data);
   totalAmount();
@@ -77,12 +80,17 @@ function displayData(data) {
     remove.textContent = "Remove";
     remove.addEventListener("click", async function () {
       try {
-        let res = await fetch(`http://localhost:3000/cart/${element.id}`, {
-          method: "DELETE",
-        });
-        let res1 = await fetch(`http://localhost:3000/cart`);
-        let data = awaitres1.json();
-        displayContent(data);
+        let res = await fetch(
+          `https://mock-server-team-masai-blvy.onrender.com/cart/${element.id}`,
+          {
+            method: "DELETE",
+          }
+        );
+        let res1 = await fetch(
+          `https://mock-server-team-masai-blvy.onrender.com/cart`
+        );
+        let data = await res1.json();
+        displayData(data);
       } catch (error) {
         console.log(error.message);
       }
@@ -98,19 +106,24 @@ function displayData(data) {
 
 async function qty_change(element, val) {
   let user = { qty: val };
-  let res = await fetch(`http://localhost:3000/cart/${element.id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(user),
-  });
+  let res = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/cart/${element.id}`,
+    {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }
+  );
 
   totalAmount();
 }
 
 async function totalAmount() {
-  let res = await fetch(`http://localhost:3000/cart`);
+  let res = await fetch(
+    `https://mock-server-team-masai-blvy.onrender.com/cart`
+  );
   let data = await res.json();
 
   let total = 0;
