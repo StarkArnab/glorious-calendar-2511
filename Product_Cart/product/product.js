@@ -5,7 +5,7 @@ let rating_filter = document.getElementById("rating-filter");
 let page = 1;
 async function fetData(page = 1) {
   let res = await fetch(
-    `http://localhost:3000/exterior?_page=${page}&_limit=7`
+    `https://mock-server-team-masai-blvy.onrender.com/exterior?_page=${page}&_limit=8`
   );
   let data = await res.json();
   displayContent(data);
@@ -73,9 +73,10 @@ function displayContent(data) {
 }
 
 async function addItem(element) {
-  let res = await fetch(`http://localhost:3000/cart`);
+  let res = await fetch(`https://mock-server-team-masai-blvy.onrender.com/cart`);
   let data = await res.json();
-
+  console.log(data);
+  
   let flag = true;
   data.forEach((el) => {
     if (el.id == element.id) {
@@ -86,7 +87,7 @@ async function addItem(element) {
   element.qty = 1;
 
   if (flag) {
-    let res_add = await fetch(`http://localhost:3000/cart`, {
+    let res_add = await fetch(`https://mock-server-team-masai-blvy.onrender.com/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,14 +102,14 @@ async function addItem(element) {
 price_filter.addEventListener("change", async function () {
   if (price_filter.value == "lowtohigh") {
     let res = await fetch(
-      `http://localhost:3000/exterior?_sort=price&_order=asc`
+      `https://mock-server-team-masai-blvy.onrender.com/cart`
     );
     let data = await res.json();
     container.innerHTML = "";
     displayContent(data);
   } else {
     let res = await fetch(
-      `http://localhost:3000/exterior?_sort=price&_order=desc`
+      `https://mock-server-team-masai-blvy.onrender.com/exterior?_sort=price&_order=desc`
     );
     let data = await res.json();
     container.innerHTML = "";
@@ -129,7 +130,7 @@ window.addEventListener("scroll", () => {
 
 rating_filter.addEventListener("change", async function () {
   let val = rating_filter.value;
-  let res = await fetch(`http://localhost:3000/exterior`);
+  let res = await fetch(`https://mock-server-team-masai-blvy.onrender.com/exterior`);
   let data = await res.json();
 
   let data_arr = data.filter((el) => {
