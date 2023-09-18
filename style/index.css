@@ -198,7 +198,6 @@ nav {
 
 .category-item img {
     width: 200px;
-    /* Set a fixed width for uniform image sizes */
     height: 120px;
 }
 
@@ -212,7 +211,6 @@ nav {
 @keyframes moveCategories {
     0% {
         transform: translateX(0);
-        /* Start off-screen to the right */
     }
 
     100% {
@@ -226,7 +224,6 @@ nav {
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
-    /* Gray background color */
     padding: 20px;
 }
 
@@ -344,7 +341,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
 }
 
 .product-grid {
@@ -390,7 +386,6 @@ nav {
     border: 1px solid #ccc;
     margin: 10px;
     padding: 20px;
-    /* text-align: center; */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -427,7 +422,6 @@ nav {
 .offers-section {
     text-align: center;
     padding: 20px;
-
 }
 
 .image-container {
@@ -440,7 +434,6 @@ nav {
     width: 800px;
     height: auto;
     margin: 0 10px;
-
 }
 
 
@@ -451,7 +444,6 @@ nav {
     justify-content: center;
     align-items: center;
     width: 80%;
-    padding: 20px;
     margin: 0 auto;
 }
 
@@ -470,13 +462,11 @@ nav {
     font-family: 'Thames Serial';
     src: url('path/to/thames-serial-font.woff2') format('woff2'),
         url('path/to/thames-serial-font.woff') format('woff');
-
 }
 
 /* Apply the font to the left section's paragraphs */
 .left-section p {
     font-family: 'Thames Serial', sans-serif;
-
 }
 
 .left-section>p:nth-child(1) {
@@ -492,6 +482,7 @@ nav {
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 /* Individual labels with hover effect */
@@ -620,7 +611,6 @@ ul {
         width: 100%;
     }
 }
-
 h1,
 h2,
 h3,
