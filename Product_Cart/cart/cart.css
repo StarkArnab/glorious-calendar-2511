@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Bricolage Grotesque", sans-serif; */
+  /* font-family: "Genos", sans-serif; */
+  /* font-family: "Kanit", sans-serif; */
+  /* font-family: "Maven Pro", sans-serif; */
+  /* font-family: "REM", sans-serif; */
+  /* font-family: "Roboto", sans-serif;  */
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --primary-color: #ffd93d;
+  --secondary-color: #ff8400;
+  --text-color: #4f200d;
+}
+
+/* start */
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd83d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd83d97;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #ffd83d97;
+}
+
+/* end */
+
+#container {
+  display: flex;
+}
+
+#items {
+  max-width: 350px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.img-card {
+  width: 100%;
+}
+
+.img-in {
+  width: 100%;
+}
+
+.nama {
+  opacity: 0.5;
+  margin: 10px;
+}
+
+.price {
+  margin: 10px;
+}
+
+.qty {
+  margin: 10px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  border: none;
+  padding: 6px;
+}
+
+.qty::before {
+  content: "\20B9";
+}
+
+.remove {
+  border: none;
+  background-color: var(--primary-color);
+  padding: 6px 15px;
+  border-radius: 2px;
+}
+
+/* start */
+#details {
+  width: 100%;
+  margin: 20px;
+}
+
+#details > h1 {
+  text-align: center;
+}
+
+/* end */
+table{
+    width: 100%;
+}
+td {
+ background-color: #ffd83d3b;
+ padding: 10px 4px;
+}
+
+#check{
+   border: none;
+   background-color: #ffd83dc5;
+   padding: 10px;
+   margin: 10px;
+   float: right;
+}
+
+
+/* navbar */
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 80px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  padding: 5px;
+  height: 20px;
+  flex-grow: 1;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-bar button img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.icon-button {
+  text-decoration: none;
+  margin: 0 10px;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.icon-button img {
+  width: 24px;
+   height: 24px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="./cart.css"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Genos:wght@300&family=Kanit:wght@300&family=Maven+Pro&family=REM:wght@900&family=Roboto:wght@100;300;400&family=Ubuntu&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="./images/auto-parts-logo1.png"
+            alt="Company Logo"
+          />
+        </div>
+        <!-- <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search..."
+          />
+          <button type="submit">
+            <img
+              src="./images/icons8-google-web-search-150.png"
+              alt="Search"
+            />
+          </button>
+        </div> -->
+        <div class="nav-icons">
+          <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-account-50.png"
+              alt="My Account"
+          /></a>
+          <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-heart-50.png"
+              alt="Wishlist"
+          /></a>
+          <!-- <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-cart-50.png"
+              alt="Cart"
+          /></a> -->
+        </div>             
+      </div>
+    </nav>
+    <div id="container">
+      <div id="items"></div>
+      <div id="details">
+         <h1>Details</h1>
+         <table>
+            <tr>
+                <td class="content">No of items</td>
+                <td><span id="totalItem">10</span></td>
+            </tr>
+            <tr>
+                <td class="content">
+                    Total Amount
+                </td>
+                 <td>
+                    ₹ <span id="toatlAmount">1000</span>
+                 </td>
+            </tr>
+            
+            
+            <tr>
+                <td>Apply Coupon</td>
+                <td>
+                    <input id = "coupon" style="padding: 7px;border: none;
+                    " type="text" placeholder="Enter your coupon">
+                    <button style="background-color: #ffd83dc5;border: none;padding: 6px;" id="apply">Apply</button>
+                 </td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td>
+                    ₹ <span id="discount-val">0</span>
+                 </td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>
+                    ₹ <span>40</span>
+                 </td>
+            </tr>
+            <tr>
+                <td>Payable</td>
+                <td>
+                    ₹ <span id="payable">0</span>
+                 </td>
+            </tr>
+            
+         </table>
+
+         <button id="check">Check Out</button>
+
+      </div>
+    </div>
+  </body>
+  <script src="./cart.js"></script>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./product.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Genos:wght@300&family=Kanit:wght@300&family=Maven+Pro&family=REM:wght@900&family=Roboto:wght@100;300;400&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="./images/auto-parts-logo1.png"
+            alt="Company Logo"
+          />
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search..."
+          />
+          <button type="submit">
+            <img
+              src="./images/icons8-google-web-search-150.png"
+              alt="Search"
+            />
+          </button>
+        </div>
+        <div class="nav-icons">
+          <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-account-50.png"
+              alt="My Account"
+          /></a>
+          <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-heart-50.png"
+              alt="Wishlist"
+          /></a>
+          <a
+            href="#"
+            class="icon-button"
+            ><img
+              src="./images/icons8-cart-50.png"
+              alt="Cart"
+          /></a>
+        </div>             
+      </div>
+    </nav>
+    <div class="filters">
+      <select
+        class="filter"
+        id="price-filter"
+      >
+        <option
+          disabled
+          selected
+        >
+          Price
+        </option>
+        <option value="lowtohigh">Low to High</option>
+        <option value="hightolow">High to Low</option>
+      </select>
+      <select
+        class="filter"
+        id="rating-filter"
+      >
+        <option
+          disabled
+          selected
+        >
+          Rating
+        </option>
+        <option value="rate_1">1</option>
+        <option value="rate_2">2</option>
+        <option value="rate_3">above 3</option>
+      </select>
+      <select
+        class="filter"
+        id="brand-filter"
+      >
+        <option
+          disabled
+          selected
+        >
+          Brand
+        </option>
+        <option value="">JBM Group</option>
+        <option value="lowtohigh">Subros</option>
+        <option value="lowtohigh">Bosch</option>
+      </select>
+    </div>
+    <div id="container"></div>
+  </body>
+  <script src="./product.js"></script>
+</html>
