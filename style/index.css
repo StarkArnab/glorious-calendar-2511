@@ -237,6 +237,7 @@ nav {
 
 /* Style the feature container */
 .feature-container {
+
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -244,6 +245,7 @@ nav {
 
 /* Style the feature items (images) */
 .feature-item {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     width: 100%;
 }
 
@@ -449,7 +451,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 80%;
-
+    padding: 20px;
     margin: 0 auto;
 }
 
@@ -461,7 +463,7 @@ nav {
     gap: 10px;
     width: 40%;
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 @font-face {
@@ -489,21 +491,22 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 /* Individual labels with hover effect */
 .label {
-    background-color: #f0f0f0;
+    background-color: #dddada;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: rgb(100, 97, 97);
 }
 
 /* Hover effect */
 .label:hover {
-    background-color: #e0e0e0;
+    background-color: #b8afaf;
 }
 
 
@@ -616,4 +619,14 @@ ul {
     .footer-col {
         width: 100%;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Copperplate Gothic Bold', sans-serif;
+    /* Add other styling properties if needed, such as font-size, color, etc. */
 }
