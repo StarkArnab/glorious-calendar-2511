@@ -91,3 +91,17 @@ Specify the license under which your project is distributed.
 ## Acknowledgments
 
 If you want to acknowledge any individuals, projects, or resources that inspired or helped you during your project, do so here.
+
+## Collaborators
+
+We'd like to extend our gratitude to the following individuals who have contributed to this project:
+
+- [Collaborator Name 1]([https://github.com/collaborator1](https://github.com/StarkArnab))
+- [Collaborator Name 2]([https://github.com/collaborator2](https://github.com/Vikaschaturvedi167))
+- [Collaborator Name 3]([https://github.com/collaborator3](https://github.com/StarkArnab))
+- [Collaborator Name 4]([[https://github.com/collaborator3](https://github.com/StarkArnab)](https://github.com/Sunil8090))
+
+Their contributions have been invaluable in making this project a success.
+
+If you're interested in becoming a collaborator, please refer to the [Contributing](#contributing) section for more information.
+
