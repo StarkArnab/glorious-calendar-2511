@@ -201,13 +201,16 @@ function pay_able() {
     let temp1 = +toatl_Amount.textContent;
     let temp2 = +discount_val.textContent;
     console.log(temp1, "  ", temp2);
+    let val = 0;
     if (temp1 > 1) {
+      val = 200;
       rupee_ship.textContent = 200;
     }
-    payable.textContent = Math.round(temp1 - temp2 + 200);
+
+    payable.textContent = Math.round(temp1 - temp2 + val);
     localStorage.setItem(
       "Total_price",
-      JSON.stringify(Math.round(temp1 - temp2 + 200))
+      JSON.stringify(Math.round(temp1 - temp2 + val))
     );
   }, 1200);
 }
