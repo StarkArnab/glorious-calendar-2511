@@ -34,6 +34,10 @@ function displayData(data) {
     img.classList.add("img-in");
     img.src = element.image;
 
+    // img_card.style.backgroundImage = `url(${element.image})`;
+    // img_card.style.backgroundSize = "content-box";
+    // img_card.style.backgroundPosition = "center";
+
     let body = document.createElement("div");
     body.classList.add("card-body");
 
@@ -45,8 +49,27 @@ function displayData(data) {
     price.classList.add("price");
     price.textContent = `₹${element.price}`;
 
+    let click_collect = document.createElement("h5");
+    click_collect.style.margin = "0 10px";
+    click_collect.classList.add("dummy");
+    click_collect.textContent = `Click & Collect`;
+
+    let home_del = document.createElement("h5");
+    home_del.style.margin = "0 10px";
+    home_del.classList.add("dummy");
+    home_del.textContent = `Home Delivery`;
+
+    let icon = document.createElement("i");
+    icon.setAttribute("class", "fa-solid fa-tag fa-flip-horizontal");
+
     let qty = document.createElement("select");
     qty.classList.add("qty");
+    qty.setAttribute("id", "qty");
+
+    const labelElement = document.createElement("label");
+    labelElement.classList.add("label");
+    labelElement.setAttribute("for", "qty");
+    labelElement.textContent = "Quantity";
 
     const optionData = [
       { value: "1", text: "1" },
@@ -78,6 +101,10 @@ function displayData(data) {
     let remove = document.createElement("button");
     remove.classList.add("remove");
     remove.textContent = "Remove";
+    let icon1 = document.createElement("i");
+    icon1.setAttribute("class", "fa-solid fa-trash");
+    remove.append(icon1);
+
     remove.addEventListener("click", async function () {
       try {
         let res = await fetch(
@@ -91,13 +118,24 @@ function displayData(data) {
         );
         let data = await res1.json();
         displayData(data);
+        totalAmount();
+        coup();
       } catch (error) {
         console.log(error.message);
       }
     });
 
     img_card.append(img);
-    body.append(nama, price, qty, remove);
+    body.append(
+      nama,
+      icon,
+      price,
+      click_collect,
+      home_del,
+      labelElement,
+      qty,
+      remove
+    );
 
     card.append(img_card, body);
     items.append(card);
@@ -118,6 +156,7 @@ async function qty_change(element, val) {
   );
 
   totalAmount();
+  coup();
 }
 
 async function totalAmount() {
@@ -139,19 +178,70 @@ let coupon1 = "REALDEAL100";
 let coupon2 = "SPECIAL100";
 
 apply_coup.addEventListener("click", function () {
-  let val = coupon.value;
-
-  if (val == coupon1 || val == coupon2) {
-    let temp = +toatl_Amount.textContent;
-    discount_val.textContent = Math.round((10 / 100) * temp);
-  }
-
+  coup();
   pay_able();
 });
 
-function pay_able() {
-  let temp1 = +toatl_Amount.textContent;
-  let temp2 = +discount_val.textContent;
-  console.log(temp1, "  ", temp2);
-  payable.textContent = Math.round(temp1 - temp2 - 40);
+function coup() {
+  setTimeout(() => {
+    let val = coupon.value;
+    if (val == coupon1 || val == coupon2) {
+      let temp = +toatl_Amount.textContent;
+      discount_val.textContent = Math.round((10 / 100) * temp);
+    } else {
+      discount_val.textContent = 0;
+    }
+  }, 1000);
 }
+
+function pay_able() {
+  setTimeout(() => {
+    let temp1 = +toatl_Amount.textContent;
+    let temp2 = +discount_val.textContent;
+    console.log(temp1, "  ", temp2);
+    payable.textContent = Math.round(temp1 - temp2 + 200);
+    localStorage.setItem(
+      "Toatl_price",
+      JSON.stringify(Math.round(temp1 - temp2 + 200))
+    );
+  }, 1200);
+}
+
+//overlay
+
+const openPopupButton = document.getElementById("openPopup");
+const closePopupButton = document.getElementById("closePopup");
+const addressPopup = document.getElementById("addressPopup");
+const overlay = document.createElement("div");
+overlay.className = "overlay";
+
+openPopupButton.addEventListener("click", () => {
+  addressPopup.style.display = "block";
+  overlay.style.display = "block";
+  document.body.appendChild(overlay);
+});
+
+closePopupButton.addEventListener("click", () => {
+  addressPopup.style.display = "none";
+  overlay.style.display = "block";
+  document.body.removeChild(overlay);
+});
+
+overlay.addEventListener("click", function () {
+  addressPopup.style.display = "none";
+  document.body.removeChild(overlay);
+});
+
+let form = document.querySelector("form");
+let pin_holder = document.getElementById("pin_holder");
+let head_pin = document.getElementById("head_pin");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  addressPopup.style.display = "none";
+  document.body.removeChild(overlay);
+  let val = event.target.pin_holder.value;
+
+  head_pin.textContent = `Pin Code: ${val}`;
+  head_pin.style.display = "block";
+});

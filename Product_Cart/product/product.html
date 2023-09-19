@@ -26,22 +26,25 @@
     />
   </head>
   <body>
-    <!-- <nav>
+    <nav>
       <div class="navbar">
         <div class="logo">
-          <img
-            src="./images/auto-parts-logo1.png"
-            alt="Company Logo"
-          />
+          <a href="../../index.html">
+            <img
+              src="../../images/auto-parts-logo1.png"
+              alt="Company Logo"
+            />
+          </a>
         </div>
         <div class="search-bar">
           <input
+            id="search"
             type="text"
             placeholder="Search..."
           />
           <button type="submit">
             <img
-              src="./images/icons8-google-web-search-150.png"
+              src="../../images/icons8-google-web-search-150.png"
               alt="Search"
             />
           </button>
@@ -51,70 +54,180 @@
             href="#"
             class="icon-button"
             ><img
-              src="./images/icons8-account-50.png"
+              src="../../images/icons8-account-50.png"
               alt="My Account"
           /></a>
           <a
             href="#"
             class="icon-button"
             ><img
-              src="./images/icons8-heart-50.png"
+              src="../../images/icons8-heart-50.png"
               alt="Wishlist"
           /></a>
           <a
-            href="#"
+            href="../cart/cart.html"
             class="icon-button"
             ><img
-              src="./images/icons8-cart-50.png"
+              src="../../images/icons8-cart-50.png"
               alt="Cart"
           /></a>
-        </div>             
+        </div>
       </div>
-    </nav> -->
-    <div class="filters">
-      <select
-        class="filter"
-        id="price-filter"
-      >
-        <option
-          disabled
-          selected
-        >
-          Price
-        </option>
-        <option value="lowtohigh">Low to High</option>
-        <option value="hightolow">High to Low</option>
-      </select>
-      <select
-        class="filter"
-        id="rating-filter"
-      >
-        <option
-          disabled
-          selected
-        >
-          Rating
-        </option>
-        <option value="rate_1">1</option>
-        <option value="rate_2">2</option>
-        <option value="rate_3">above 3</option>
-      </select>
-      <select
-        class="filter"
-        id="brand-filter"
-      >
-        <option
-          disabled
-          selected
-        >
-          Brand
-        </option>
-        <option value="">JBM Group</option>
-        <option value="lowtohigh">Subros</option>
-        <option value="lowtohigh">Bosch</option>
-      </select>
-    </div>
-    <div id="container"></div>
+    </nav>
+    <header class="main">
+      <div id="filters">
+        <div class="wrapper">
+          <header>
+            <h3>PRICE RANGE</h3>
+            <p>Use slider or Min and Max</p>
+          </header>
+          <div class="price-input">
+            <div class="feild">
+              <span>Min</span>
+              <input
+                type="number"
+                class="input-min"
+                id="input-min"
+                value="2500"
+              />
+            </div>
+            <div class="separator">-</div>
+            <div class="feild">
+              <span>Max</span>
+              <input
+                type="number"
+                class="input-max"
+                id="input-max"
+                value="7500"
+              />
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input
+              type="range"
+              class="range-min"
+              id="range-min"
+              min="0"
+              max="15000"
+              value="2500"
+              step="100"
+            />
+            <input
+              type="range"
+              class="range-max"
+              id="range-max"
+              min="0"
+              max="15000"
+              value="7500"
+              step="100"
+            />
+          </div>
+        </div>
+        <div class="brand">
+          <h3>BRAND</h3>
+          <input
+            class="brand_radio"
+            type="radio"
+            id="Bosch"
+            name="company"
+            value="Bosch"
+          />
+          <label
+            class="label_radio"
+            for="Bosch"
+            >Bosch</label
+          ><br />
+
+          <input
+            class="brand_radio"
+            type="radio"
+            id="JBM-Group"
+            name="company"
+            value="JBMGroup"
+          />
+          <label
+            class="label_radio"
+            for="JBM-Group"
+            >JBM Group</label
+          ><br />
+
+          <input
+            class="brand_radio"
+            type="radio"
+            id="Subros"
+            name="company"
+            value="Subros"
+          />
+          <label
+            class="label_radio"
+            for="Subros"
+            >Subros</label
+          ><br />
+        </div>
+        <div class="rating">
+          <h3>RATING</h3>
+          <input
+            class="rating_radio"
+            type="radio"
+            id="rating_4"
+            name="category"
+            value="4"
+          />
+          <label
+            class="label_radio"
+            for="rating_4"
+            >Above 4</label
+          ><br />
+
+          <input
+            class="rating_radio"
+            type="radio"
+            id="rating_3"
+            name="category"
+            value="3"
+          />
+          <label
+            class="label_radio"
+            for="rating_3"
+            >Above 3</label
+          ><br />
+
+          <input
+            class="rating_radio"
+            type="radio"
+            id="rating_2"
+            name="category"
+            value="2"
+          />
+          <label
+            class="label_radio"
+            for="rating_2"
+            >Above 2</label
+          ><br />
+
+          <input
+            class="rating_radio"
+            type="radio"
+            id="rating_1"
+            name="category"
+            value="1"
+          />
+          <label
+            class="label_radio"
+            for="rating_1"
+            >Above 1</label
+          ><br />
+        </div>
+      </div>
+      <div id="container"></div>
+    </header>
   </body>
   <script src="./product.js"></script>
+  <script
+    src="https://kit.fontawesome.com/b8129bed2b.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

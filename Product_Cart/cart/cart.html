@@ -26,85 +26,270 @@
     rel="stylesheet"
   />
   <body>
-    <!-- <nav>
+    <div
+      id="addressPopup"
+      class="popup"
+    >
+      <!-- Address input form -->
+      <form>
+        <!-- Fields for collecting address information -->
+
+        <button
+          id="closePopup"
+          style="
+            display: block;
+            background-color: rgba(215, 27, 27, 0.531);
+            padding: 7px;
+            margin-bottom: 25px;
+            border: none;
+          "
+        >
+          &#10006;
+        </button>
+        <h2 style="text-align: center; margin: 10px">Your Address</h2>
+        <hr />
+        <input
+          required
+          type="text"
+          placeholder="Full Name"
+        />
+        <input
+          required
+          type="text"
+          placeholder="Shipping Address Line 1"
+        />
+        <input
+          type="text"
+          placeholder="Shipping Address Line 2"
+        />
+        <input
+          required
+          type="text"
+          placeholder="City"
+        />
+        <input
+          type="text"
+          placeholder="State/Province"
+        />
+        <input
+          required
+          id="pin_holder"
+          type="number"
+          placeholder="ZIP/Postal Code"
+        />
+        <input
+          type="text"
+          placeholder="Country"
+        />
+        <input
+          required
+          type="number"
+          placeholder="Phone Number"
+        />
+        <input
+          required
+          type="email"
+          placeholder="Email Address"
+        />
+        <textarea placeholder="Special Instructions"></textarea>
+
+        <!-- Buttons for saving and closing the popup -->
+        <button
+          class="form-btn"
+          id="saveAddress"
+        >
+          Save Address
+        </button>
+        <!-- <button
+          class="form-btn"
+          id="closePopup"
+        >
+          Close
+        </button> -->
+      </form>
+    </div>
+    <nav>
       <div class="navbar">
         <div class="logo">
           <img
-            src="./images/auto-parts-logo1.png"
+            src="../../images/auto-parts-logo1.png"
             alt="Company Logo"
           />
         </div>
-        
+
         <div class="nav-icons">
           <a
             href="#"
             class="icon-button"
             ><img
-              src="./images/icons8-account-50.png"
+              src="../../images/icons8-account-50.png"
               alt="My Account"
           /></a>
           <a
             href="#"
             class="icon-button"
             ><img
-              src="./images/icons8-heart-50.png"
+              src="../../images/icons8-heart-50.png"
               alt="Wishlist"
           /></a>
-        </div>             
+        </div>
       </div>
-    </nav> -->
+    </nav>
     <div id="container">
       <div id="items"></div>
       <div id="details">
-         <h1>Details</h1>
-         <table>
-            <tr>
-                <td class="content">No of items</td>
-                <td><span id="totalItem">10</span></td>
-            </tr>
-            <tr>
-                <td class="content">
-                    Total Amount
-                </td>
-                 <td>
-                    ₹ <span id="toatlAmount">1000</span>
-                 </td>
-            </tr>
-            
-            
-            <tr>
-                <td>Apply Coupon</td>
-                <td>
-                    <input id = "coupon" style="padding: 7px;border: none;
-                    " type="text" placeholder="Enter your coupon">
-                    <button style="background-color: #ffd83dc5;border: none;padding: 6px;" id="apply">Apply</button>
-                 </td>
-            </tr>
-            <tr>
-                <td>Discount</td>
-                <td>
-                    ₹ <span id="discount-val">0</span>
-                 </td>
-            </tr>
-            <tr>
-                <td>Shipping</td>
-                <td>
-                    ₹ <span>40</span>
-                 </td>
-            </tr>
-            <tr>
-                <td>Payable</td>
-                <td>
-                    ₹ <span id="payable">0</span>
-                 </td>
-            </tr>
-            
-         </table>
+        <h1 style="margin: 10px">Order Summary</h1>
+        <hr
+          size="1.5"
+          color="black"
+          width="85%"
+          style="margin: 0 auto"
+        />
+        <div
+          class="order-summary"
+          style="position: relative"
+        >
+          <h5>
+            No of Products
+            <span
+              style="float: right"
+              id="totalItem"
+              >10</span
+            >
+          </h5>
+          <h5>
+            Total Amount<span
+              style="float: right"
+              id="toatlAmount"
+              class="rupee"
+              >1000</span
+            >
+          </h5>
+          <h5 style="color: red">
+            Discount<span
+              style="float: right"
+              id="discount-val"
+              class="rupee"
+              >0</span
+            >
+          </h5>
 
-         <button id="check">Check Out</button>
+          <h5>
+            Shipping<span
+              class="rupee"
+              style="float: right"
+              >0</span
+            >
+          </h5>
 
+          <img
+            style="
+              width: 300px;
+              position: absolute;
+              left: 15%;
+              bottom: 10%;
+              transform: rotate(-35deg);
+            "
+            src="../images/old_style.png"
+            alt=""
+          />
+
+          <hr
+            size="1.5"
+            color="black"
+            width="90%"
+            style="margin: 0 auto"
+          />
+
+          <h4 style="color: #ff8400">
+            Order total
+            <span
+              style="float: right"
+              id="payable"
+              class="rupee"
+              >0</span
+            >
+          </h4>
+          <hr
+            size="1.5"
+            color="black"
+            width="90%"
+            style="margin: 0 auto"
+          />
+
+          <h4 style="margin-bottom: 0">Apply a promo code</h4>
+          <p style="font-size: 13px; margin: 4px 25px; opacity: 0.7">
+            Remove any dashes or spaces before applying
+          </p>
+          <input
+            id="coupon"
+            style="
+              margin: 4px 23px;
+              width: 300px;
+              padding: 10px;
+              border: 1px solid black;
+            "
+            type="text"
+          />
+          <button
+            id="apply"
+            style="
+              margin: 4px 23px;
+              padding: 10px 20px;
+              background-color: white;
+              font-weight: 600;
+              color: rgb(23, 21, 21);
+              border: 1px solid black;
+            "
+          >
+            APPLY
+          </button>
+        </div>
+        <h3 style="display: inline-block; margin: 18px 40px">
+          Your addresses <br />
+          <p
+            id="head_pin"
+            style="
+              font-size: 14px;
+              padding: 10px 0;
+              color: #ff8400;
+              display: none;
+            "
+          ></p>
+        </h3>
+        <div class="content">
+          <!-- Button to open the address popup -->
+          <button id="openPopup">EDIT ADDRESS</button>
+        </div>
+        <br />
+        <hr
+          size="1.5"
+          color="black"
+          width="90%"
+          style="margin: 0 auto"
+        />
+        <button id="check">CHECKOUT NOW</button>
+
+        <p style="margin: 10px 30px; font-size: 12px">
+          By clicking 'Proceed to Payment,' you agree to our
+          <a
+            href="#"
+            style="color: #ff8400; text-decoration: none"
+            >terms</a
+          >
+          and
+          <a
+            href="#"
+            style="color: #ff8400; text-decoration: none"
+            >Conditions</a
+          >.
+        </p>
       </div>
     </div>
   </body>
   <script src="./cart.js"></script>
+  <script
+    src="https://kit.fontawesome.com/b8129bed2b.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
