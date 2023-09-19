@@ -245,3 +245,79 @@ form.addEventListener("submit", (event) => {
   head_pin.textContent = `Pin Code: ${val}`;
   head_pin.style.display = "block";
 });
+
+let pay = document.getElementById("check");
+pay.addEventListener("click", () => {
+  let total = JSON.parse(localStorage.getItem("Total_price"));
+  console.log(total);
+  var options = {
+    key: "rzp_test_yMVGTQKGP3oobU", // Enter the Key ID generated from the Dashboard
+    amount: total + "00",
+    currency: "INR",
+    description: "Acme Corp",
+    image: "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg",
+    prefill: {
+      email: "gaurav.kumar@example.com",
+      contact: +919900000000,
+    },
+    config: {
+      display: {
+        blocks: {
+          utib: {
+            //name for Axis block
+            name: "Pay using Axis Bank",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["UTIB"],
+              },
+              {
+                method: "netbanking",
+                banks: ["UTIB"],
+              },
+            ],
+          },
+          other: {
+            //  name for other block
+            name: "Other Payment modes",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["ICIC"],
+              },
+              {
+                method: "netbanking",
+              },
+            ],
+          },
+        },
+        hide: [
+          {
+            method: "upi",
+          },
+        ],
+        sequence: ["block.utib", "block.other"],
+        preferences: {
+          show_default_blocks: false, // Should Checkout show its default blocks?
+        },
+      },
+    },
+    handler: function (response) {
+      //alert(response.razorpay_payment_id);
+      window.location.href = "index.html";
+    },
+    modal: {
+      ondismiss: function () {
+        if (confirm("Are you sure, you want to close the form?")) {
+          txt = "You pressed OK!";
+          console.log("Checkout form closed by the user");
+        } else {
+          txt = "You pressed Cancel!";
+          console.log("Complete the Payment");
+        }
+      },
+    },
+  };
+  var rzp1 = new Razorpay(options);
+  rzp1.open();
+});
