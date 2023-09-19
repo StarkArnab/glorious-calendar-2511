@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./CSS/login.css" />
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar............................................... -->
+
+ 
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/auto-parts-logo1.png" alt="Company Logo">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><img src="./images/icons8-google-web-search-150.png" alt="Search"></button>
+                </div>
+                <div class="nav-icons">
+                    <a href="#" class="icon-button"><img src="./images/icons8-account-50.png" alt="My Account"></a>
+                    <a href="#" class="icon-button"><img src="./images/icons8-heart-50.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-button"><img src="./images/icons8-cart-50.png" alt="Cart"></a>
+                </div>
+            </div>
+    <!-- main signin............................................... -->
+    <h1 id="head">SIGN IN</h1>
+
+    <div id="massage-signout">
+        <div id="message" style="display: none;">
+            <p id="message-text"></p>
+        </div>
+        <div>
+        <button id="logout" style="display: none;">Sign Out</button>
+    </div>
+    </div>
+
+    <form action="">
+        <div id="main">
+            <div id="sign">
+                <div id="head-sign">
+                    <h1>SIGN IN</h1 >
+                </div>
+                <div id="gmail">
+                    <label for="email"></label>
+                    <input type="text" name="login_email" id="login_email" placeholder="Enter your email" />
+                </div>
+                <div  id="pass">
+                    <label for="password"></label>
+                    <input type="password" name="login_password" id="login_password"
+                        placeholder="Enter your password">
+                </div>
+                <div id="forget">
+                <a href="Forget Password.html">Forget password?</a>
+                 </div>
+                <button type="button" id="login" name="login" class="btn btn-success">SIGN IN</button>
+            </div>
+
+            <div id="reg">
+                <div id="reg-head">
+                    <h1>REGISTER</h1>
+                </div>
+
+                <ul id="point">
+                    <li id="line">Create an account with us and you'll be able to:</li>
+                    <li id="line">Check out faster</li>
+                    <li id="line">Save multiple shipping addresses</li>
+                    <li id="line">Access your order history</li>
+                    <li id="line">Track new orders</li>
+                    <li id="line">Save items to your Wish List</li>
+                </ul>
+                <div id="reg-button">
+                <button onclick="location.href='signup.html'" type="button" id="register" name="register"
+                    class="btn-register">REGISTER</button>
+            </div>
+            </div>
+        </div>
+    </form>
+
+
+
+                
+
+</body>
+
+</html>
+
+<script src="./Script/login.js" type="module"></script>

@@ -1,0 +1,64 @@
+navbar-css
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px;
+    height: 20px;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.icon-button {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+}
