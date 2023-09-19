@@ -2,34 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <link
-    rel="stylesheet"
-    href="./cart.css"
-  />
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
+  <link rel="stylesheet" href="./cart.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Genos:wght@300&family=Kanit:wght@300&family=Maven+Pro&family=REM:wght@900&family=Roboto:wght@100;300;400&family=Ubuntu&display=swap"
     rel="stylesheet"
   />
   <body>
-    <div
-      id="addressPopup"
-      class="popup"
-    >
+    <div id="addressPopup" class="popup">
       <!-- Address input form -->
       <form>
         <!-- Fields for collecting address information -->
@@ -48,58 +32,24 @@
         </button>
         <h2 style="text-align: center; margin: 10px">Your Address</h2>
         <hr />
-        <input
-          required
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          required
-          type="text"
-          placeholder="Shipping Address Line 1"
-        />
-        <input
-          type="text"
-          placeholder="Shipping Address Line 2"
-        />
-        <input
-          required
-          type="text"
-          placeholder="City"
-        />
-        <input
-          type="text"
-          placeholder="State/Province"
-        />
+        <input required type="text" placeholder="Full Name" />
+        <input required type="text" placeholder="Shipping Address Line 1" />
+        <input type="text" placeholder="Shipping Address Line 2" />
+        <input required type="text" placeholder="City" />
+        <input type="text" placeholder="State/Province" />
         <input
           required
           id="pin_holder"
           type="number"
           placeholder="ZIP/Postal Code"
         />
-        <input
-          type="text"
-          placeholder="Country"
-        />
-        <input
-          required
-          type="number"
-          placeholder="Phone Number"
-        />
-        <input
-          required
-          type="email"
-          placeholder="Email Address"
-        />
+        <input type="text" placeholder="Country" />
+        <input required type="number" placeholder="Phone Number" />
+        <input required type="email" placeholder="Email Address" />
         <textarea placeholder="Special Instructions"></textarea>
 
         <!-- Buttons for saving and closing the popup -->
-        <button
-          class="form-btn"
-          id="saveAddress"
-        >
-          Save Address
-        </button>
+        <button class="form-btn" id="saveAddress">Save Address</button>
         <!-- <button
           class="form-btn"
           id="closePopup"
@@ -112,27 +62,16 @@
       <div class="navbar">
         <div class="logo">
           <a href="../../index.html">
-            <img
-              src="../../images/auto-parts-logo1.png"
-              alt="Company Logo"
-            />
+            <img src="../../images/auto-parts-logo1.png" alt="Company Logo" />
           </a>
         </div>
 
         <div class="nav-icons">
-          <a
-            href="#"
-            class="icon-button"
-            ><img
-              src="../../images/icons8-account-50.png"
-              alt="My Account"
+          <a href="#" class="icon-button"
+            ><img src="../../images/icons8-account-50.png" alt="My Account"
           /></a>
-          <a
-            href="#"
-            class="icon-button"
-            ><img
-              src="../../images/icons8-heart-50.png"
-              alt="Wishlist"
+          <a href="#" class="icon-button"
+            ><img src="../../images/icons8-heart-50.png" alt="Wishlist"
           /></a>
         </div>
       </div>
@@ -141,23 +80,11 @@
       <div id="items"></div>
       <div id="details">
         <h1 style="margin: 10px">Order Summary</h1>
-        <hr
-          size="1.5"
-          color="black"
-          width="85%"
-          style="margin: 0 auto"
-        />
-        <div
-          class="order-summary"
-          style="position: relative"
-        >
+        <hr size="1.5" color="black" width="85%" style="margin: 0 auto" />
+        <div class="order-summary" style="position: relative">
           <h5>
             No of Products
-            <span
-              style="float: right"
-              id="totalItem"
-              >10</span
-            >
+            <span style="float: right" id="totalItem">10</span>
           </h5>
           <h5>
             Total Amount<span
@@ -168,14 +95,12 @@
             >
           </h5>
           <h5 style="color: red">
-            Discount<span
-              style="float: right"
-              id="discount-val"
-              class="rupee"
+            Discount<span style="float: right" id="discount-val" class="rupee"
               >0</span
             >
           </h5>
 
+<<<<<<< HEAD
           <h5>
             Shipping<span
               class="rupee"
@@ -184,6 +109,9 @@
               >0</span
             >
           </h5>
+=======
+          <h5>Shipping<span class="rupee" style="float: right">0</span></h5>
+>>>>>>> 09b6b45de17e635ed27a17abf1adb4388fa7de26
 
           <img
             style="
@@ -197,28 +125,13 @@
             alt=""
           />
 
-          <hr
-            size="1.5"
-            color="black"
-            width="90%"
-            style="margin: 0 auto"
-          />
+          <hr size="1.5" color="black" width="90%" style="margin: 0 auto" />
 
           <h4 style="color: #ff8400">
             Order total
-            <span
-              style="float: right"
-              id="payable"
-              class="rupee"
-              >0</span
-            >
+            <span style="float: right" id="payable" class="rupee">0</span>
           </h4>
-          <hr
-            size="1.5"
-            color="black"
-            width="90%"
-            style="margin: 0 auto"
-          />
+          <hr size="1.5" color="black" width="90%" style="margin: 0 auto" />
 
           <h4 style="margin-bottom: 0">Apply a promo code</h4>
           <p style="font-size: 13px; margin: 4px 25px; opacity: 0.7">
@@ -265,25 +178,14 @@
           <button id="openPopup">EDIT ADDRESS</button>
         </div>
         <br />
-        <hr
-          size="1.5"
-          color="black"
-          width="90%"
-          style="margin: 0 auto"
-        />
+        <hr size="1.5" color="black" width="90%" style="margin: 0 auto" />
         <button id="check">CHECKOUT NOW</button>
 
         <p style="margin: 10px 30px; font-size: 12px">
           By clicking 'Proceed to Payment,' you agree to our
-          <a
-            href="#"
-            style="color: #ff8400; text-decoration: none"
-            >terms</a
-          >
+          <a href="#" style="color: #ff8400; text-decoration: none">terms</a>
           and
-          <a
-            href="#"
-            style="color: #ff8400; text-decoration: none"
+          <a href="#" style="color: #ff8400; text-decoration: none"
             >Conditions</a
           >.
         </p>
@@ -295,4 +197,5 @@
     src="https://kit.fontawesome.com/b8129bed2b.js"
     crossorigin="anonymous"
   ></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </html>
