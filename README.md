@@ -73,15 +73,20 @@ Explain how to use the different parts of your website.
 To access the website's features, users need to log in using their credentials.
 ![image](https://github.com/StarkArnab/glorious-calendar-2511/assets/89017179/3efcabd5-7d60-4d13-9af6-84ff471890b3)
 
+### home page
+![image](https://github.com/StarkArnab/glorious-calendar-2511/assets/89017179/8f8ad2ce-cfc8-4c84-9134-503948393d83)
 
 
 ### Product
 
 Browse and search for spare parts using the product listings.
+![image](https://github.com/StarkArnab/glorious-calendar-2511/assets/89017179/22323a86-f5d0-4c9b-b326-21a6be2122b2)
 
 ### Product View and Cart
 
 View detailed information about a product by clicking on it. Add products to your cart and proceed to checkout when you're ready to purchase.
+![image](https://github.com/StarkArnab/glorious-calendar-2511/assets/89017179/3401c8e2-90f8-4c49-af08-9eb90afeb738)
+![image](https://github.com/StarkArnab/glorious-calendar-2511/assets/89017179/4fd16be0-b870-4cba-ae69-051c587ddfbc)
 
 ## Contributing
 
