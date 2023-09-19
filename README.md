@@ -86,7 +86,7 @@ Explain how others can contribute to your project, if applicable.
 
 ## License
 
-Specify the license under which your project is distributed.
+Under Mit license
 
 ## Acknowledgments
 
