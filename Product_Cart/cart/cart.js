@@ -201,7 +201,7 @@ function pay_able() {
     console.log(temp1, "  ", temp2);
     payable.textContent = Math.round(temp1 - temp2 + 200);
     localStorage.setItem(
-      "Toatl_price",
+      "Total_price",
       JSON.stringify(Math.round(temp1 - temp2 + 200))
     );
   }, 1200);
