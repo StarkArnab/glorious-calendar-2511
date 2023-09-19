@@ -194,11 +194,16 @@ function coup() {
   }, 1000);
 }
 
+let rupee_ship = document.getElementById("rupee_ship");
+
 function pay_able() {
   setTimeout(() => {
     let temp1 = +toatl_Amount.textContent;
     let temp2 = +discount_val.textContent;
     console.log(temp1, "  ", temp2);
+    if (temp1 > 1) {
+      rupee_ship.textContent = 200;
+    }
     payable.textContent = Math.round(temp1 - temp2 + 200);
     localStorage.setItem(
       "Total_price",
