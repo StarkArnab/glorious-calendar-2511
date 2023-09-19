@@ -96,9 +96,9 @@ If you want to acknowledge any individuals, projects, or resources that inspired
 
 We'd like to extend our gratitude to the following individuals who have contributed to this project:
 
-- [Collaborator Name 1]()
-- [Collaborator Name 2]([https://github.com/collaborator2](https://github.com/Vikaschaturvedi167))
-- [Collaborator Name 3]([https://github.com/collaborator3](https://github.com/StarkArnab))
+- [Collaborator Name 1](https://github.com/StarkArnab)
+- [Collaborator Name 2](https://github.com/ashwekkalgutkar)
+- [Collaborator Name 3](https://github.com/Vikaschaturvedi167)
 - [Collaborator Name 4](https://github.com/Sunil8090)
 
 Their contributions have been invaluable in making this project a success.
